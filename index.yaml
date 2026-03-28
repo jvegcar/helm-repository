@@ -22,4 +22,15 @@ entries:
     urls:
     - https://github.com/jvegcar/helm-repository/releases/download/test-chart-v2-0.1.0/test-chart-v2-0.1.0.tgz
     version: 0.1.0
-generated: "2026-03-28T16:02:31.003650552Z"
+  test-chart-v3:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-03-28T16:13:14.787267968Z"
+    description: A Helm chart for Kubernetes
+    digest: 22e50c9ef91b7f99a9392fad93863d1327510b0f3109b80a82f7a77c1630f1f0
+    name: test-chart-v3
+    type: application
+    urls:
+    - https://github.com/jvegcar/helm-repository/releases/download/test-chart-v3-0.1.0/test-chart-v3-0.1.0.tgz
+    version: 0.1.0
+generated: "2026-03-28T16:13:14.787273258Z"
