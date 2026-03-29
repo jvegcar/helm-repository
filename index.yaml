@@ -1,5 +1,54 @@
 apiVersion: v1
 entries:
+  base:
+  - apiVersion: v2
+    appVersion: 1.29.1
+    created: "2026-03-29T18:37:08.374365491Z"
+    description: Helm chart for deploying Istio cluster resources and CRDs
+    digest: 6f19501c8b23ad0e6bd3f950a76cdf22402a25b2d7f5a059524211de889c3ecd
+    icon: https://istio.io/latest/favicons/android-192x192.png
+    keywords:
+    - istio
+    name: base
+    sources:
+    - https://github.com/istio/istio
+    urls:
+    - https://github.com/jvegcar/helm-repository/releases/download/base-1.29.1/base-1.29.1.tgz
+    version: 1.29.1
+  gateway:
+  - apiVersion: v2
+    appVersion: 1.29.1
+    created: "2026-03-29T18:37:08.535509413Z"
+    description: Helm chart for deploying Istio gateways
+    digest: 1474fd0393e0f2f377ea310171d3bb116a0679cd9cdb59717143e631293f95e1
+    icon: https://istio.io/latest/favicons/android-192x192.png
+    keywords:
+    - istio
+    - gateways
+    name: gateway
+    sources:
+    - https://github.com/istio/istio
+    type: application
+    urls:
+    - https://github.com/jvegcar/helm-repository/releases/download/gateway-1.29.1/gateway-1.29.1.tgz
+    version: 1.29.1
+  istiod:
+  - apiVersion: v2
+    appVersion: 1.29.1
+    created: "2026-03-29T18:37:08.716167563Z"
+    description: Helm chart for istio control plane
+    digest: 4c25ef8af26e09acb6c596bcef316f7541fb925d62ba73134ecc423c953ab62f
+    icon: https://istio.io/latest/favicons/android-192x192.png
+    keywords:
+    - istio
+    - istiod
+    - istio-discovery
+    name: istiod
+    sources:
+    - https://github.com/istio/istio
+    urls:
+    - https://github.com/jvegcar/helm-repository/releases/download/istiod-1.29.1/istiod-1.29.1.tgz
+    version: 1.29.1
   kube-prometheus-stack:
   - annotations:
       artifacthub.io/license: Apache-2.0
@@ -110,4 +159,4 @@ entries:
     urls:
     - https://github.com/jvegcar/helm-repository/releases/download/test-chart-v3-0.1.0/test-chart-v3-0.1.0.tgz
     version: 0.1.0
-generated: "2026-03-28T18:41:04.583636538Z"
+generated: "2026-03-29T18:37:08.716178975Z"
