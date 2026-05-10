@@ -15,6 +15,30 @@ entries:
     urls:
     - https://github.com/jvegcar/helm-repository/releases/download/base-1.29.1/base-1.29.1.tgz
     version: 1.29.1
+  chromadb:
+  - apiVersion: v2
+    appVersion: 1.5.3
+    created: "2026-05-10T09:43:33.418219832Z"
+    description: A Helm chart for Chroma DB vector store
+    digest: fa9672d3c92b876dc68a403b979b3160cb2015f85241cbcaafeb552da88c37f8
+    home: https://github.com/amikos-tech/chromadb-chart
+    icon: https://github.com/chroma-core/docs/blob/0b58523496c3e6d07aac39f066f73378ed926750/static/img/chroma.png
+    keywords:
+    - chromadb
+    - vectordb
+    - vectorstore
+    - ai/ml
+    maintainers:
+    - email: opensource@amikos.tech
+      name: Amikos Tech
+      url: https://amikos.tech
+    name: chromadb
+    sources:
+    - https://github.com/amikos-tech/chromadb-chart
+    type: application
+    urls:
+    - https://github.com/jvegcar/helm-repository/releases/download/chromadb-0.2.2/chromadb-0.2.2.tgz
+    version: 0.2.2
   gateway:
   - apiVersion: v2
     appVersion: 1.29.1
@@ -328,6 +352,82 @@ entries:
       to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
       Prometheus Operator.
     digest: 112a16e928c70081fb6acc3d1e07fd83d2ac72b8560ffdb87027b7d9842a369d
+    home: https://github.com/prometheus-operator/kube-prometheus
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - operator
+    - prometheus
+    - kube-prometheus
+    kubeVersion: '>=1.25.0-0'
+    maintainers:
+    - email: andrew@quadcorps.co.uk
+      name: andrewgkew
+      url: https://github.com/andrewgkew
+    - email: gianrubio@gmail.com
+      name: gianrubio
+      url: https://github.com/gianrubio
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+      url: https://github.com/gkarthiks
+    - email: kube-prometheus-stack@sisti.pt
+      name: GMartinez-Sisti
+      url: https://github.com/GMartinez-Sisti
+    - email: github@jkroepke.de
+      name: jkroepke
+      url: https://github.com/jkroepke
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+      url: https://github.com/Xtigyro
+    - email: quentin.bisson@gmail.com
+      name: QuentinBisson
+      url: https://github.com/QuentinBisson
+    name: kube-prometheus-stack
+    sources:
+    - https://github.com/prometheus-community/helm-charts
+    - https://github.com/prometheus-operator/kube-prometheus
+    type: application
+    urls:
+    - https://github.com/jvegcar/helm-repository/releases/download/kube-prometheus-stack-82.15.1-jvc6/kube-prometheus-stack-82.15.1-jvc6.tgz
+    version: 82.15.1-jvc6
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+        - name: Upstream Project
+          url: https://github.com/prometheus-operator/kube-prometheus
+        - name: Upgrade Process
+          url: https://github.com/prometheus-community/helm-charts/blob/main/charts/kube-prometheus-stack/README.md#upgrading-chart
+      artifacthub.io/operator: "true"
+    apiVersion: v2
+    appVersion: v0.89.0
+    created: "2026-05-10T09:43:33.8312553Z"
+    dependencies:
+    - condition: crds.enabled
+      name: crds
+      repository: ""
+      version: 0.0.0
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 7.2.2
+    - condition: nodeExporter.enabled
+      name: prometheus-node-exporter
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 4.52.2
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana-community.github.io/helm-charts
+      version: 11.3.6
+    - condition: windowsMonitoring.enabled
+      name: prometheus-windows-exporter
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 0.12.*
+    description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards,
+      and Prometheus rules combined with documentation and scripts to provide easy
+      to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
+      Prometheus Operator.
+    digest: 769aafa9ee7c9468d394ba08113596f5d65997b197e4997a53702c0be92d41d6
     home: https://github.com/prometheus-operator/kube-prometheus
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     keywords:
@@ -778,4 +878,4 @@ entries:
     urls:
     - https://github.com/jvegcar/helm-repository/releases/download/test-chart-v3-0.1.0/test-chart-v3-0.1.0.tgz
     version: 0.1.0
-generated: "2026-04-02T19:31:15.716103591Z"
+generated: "2026-05-10T09:43:33.831315091Z"
